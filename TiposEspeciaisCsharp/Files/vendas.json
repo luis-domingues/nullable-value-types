@@ -1,0 +1,16 @@
+[
+  {
+    "Id": 1,
+    "NomeProduto": "Geladeira Brastemp",
+    "Preco": 2600.00,
+    "DataVenda": "2024-08-14T12:21:53.1492143-03:00",
+    "Desconto":  null
+  },
+  {
+    "Id": 2,
+    "NomeProduto": "Fogão Brastemp",
+    "Preco": 1950.00,
+    "DataVenda": "2024-08-14T12:21:53.1492143-03:00",
+    "Desconto":  100
+  }
+]
