@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using TiposEspeciaisDotnet.Models;
+using Newtonsoft.Json;
 
-namespace TiposEspeciaisDotnet
+string arquivoJson = File.ReadAllText("\\TiposEspeciaisCsharp\\Files\\vendas.json");
+List<Vendas> listVendas = JsonConvert.DeserializeObject<List<Vendas>>(arquivoJson);
+
+foreach (Vendas venda in listVendas)
 {
-    internal class Program
-    {
-    }
+    Console.WriteLine($"\nid: {venda.Id}\nProduto: {venda.NomeProduto}\nPreço: {venda.Preco} " +
+        $"\nData: {venda.DataVenda.ToString("dd/MM/yyyy HH:mm")}\n" +
+        $" {(venda.Desconto.HasValue ? $"Desconto de: {venda.Desconto}" : "")}");
 }
